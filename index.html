@@ -1,139 +1,367 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>МОМЕНТ — закритий покер-рум</title>
+  <meta
+    name="description"
+    content="Закритий покер-рум. Усе вирішується зараз. Вхід через Telegram."
+  />
 
-<title>МОМЕНТ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
 
-<!-- TikTok Pixel Code -->
-<script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject=t;
-  var ttq=w[t]=w[t]||[];
-  ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];
-  ttq.setAndDefer=function(t,e){
-    t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))};
-  };
-  for(var i=0;i<ttq.methods.length;i++){
-    ttq.setAndDefer(ttq,ttq.methods[i]);
-  }
-  ttq.instance=function(t){
-    for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++){
-      ttq.setAndDefer(e,ttq.methods[n]);
+  <!-- TikTok Pixel Code -->
+  <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject = t;
+      var ttq = w[t] = w[t] || [];
+      ttq.methods = ["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];
+      ttq.setAndDefer = function(t, e) {
+        t[e] = function() {
+          t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+        };
+      };
+      for (var i = 0; i < ttq.methods.length; i++) {
+        ttq.setAndDefer(ttq, ttq.methods[i]);
+      }
+      ttq.instance = function(t) {
+        for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) {
+          ttq.setAndDefer(e, ttq.methods[n]);
+        }
+        return e;
+      };
+      ttq.load = function(e, n) {
+        var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
+        ttq._i = ttq._i || {};
+        ttq._i[e] = [];
+        ttq._i[e]._u = i;
+        ttq._t = ttq._t || {};
+        ttq._t[e] = +new Date;
+        ttq._o = ttq._o || {};
+        ttq._o[e] = n || {};
+        var o = document.createElement("script");
+        o.type = "text/javascript";
+        o.async = true;
+        o.src = i + "?sdkid=" + e + "&lib=" + t;
+        var a = document.getElementsByTagName("script")[0];
+        a.parentNode.insertBefore(o, a);
+      };
+
+      ttq.load('D6TSV13C77U4GR00DLF0');
+      ttq.page();
+    }(window, document, 'ttq');
+  </script>
+  <!-- End TikTok Pixel -->
+
+  <style>
+    :root {
+      --bg: #050505;
+      --bg-soft: #0b0b0b;
+      --gold: #d4af37;
+      --gold-light: #f5dfa0;
+      --gold-deep: #a97a19;
+      --text: #f7f0dc;
+      --muted: rgba(247, 240, 220, 0.78);
+      --line: rgba(212, 175, 55, 0.28);
+      --panel: rgba(12, 10, 8, 0.44);
+      --panel-strong: rgba(8, 7, 6, 0.62);
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
     }
-    return e;
-  };
-  ttq.load=function(e,n){
-    var i="https://analytics.tiktok.com/i18n/pixel/events.js";
-    ttq._i=ttq._i||{};
-    ttq._i[e]=[];
-    ttq._i[e]._u=i;
-    ttq._t=ttq._t||{};
-    ttq._t[e]=+new Date;
-    ttq._o=ttq._o||{};
-    ttq._o[e]=n||{};
-    var o=document.createElement("script");
-    o.type="text/javascript";
-    o.async=true;
-    o.src=i+"?sdkid="+e+"&lib="+t;
-    var a=document.getElementsByTagName("script")[0];
-    a.parentNode.insertBefore(o,a);
-  };
 
-  ttq.load('D6TSV13C77U4GR00DLF0');
-  ttq.page();
-}(window, document, 'ttq');
-</script>
-<!-- End TikTok Pixel -->
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+    }
 
-body{
-margin:0;
-font-family: 'Playfair Display', serif;
-background:url('banner.jpg') center/cover no-repeat;
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-}
+    body {
+      overflow: hidden;
+    }
 
-.overlay{
-background:rgba(0,0,0,0.65);
-position:absolute;
-width:100%;
-height:100%;
-top:0;
-left:0;
-}
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      isolation: isolate;
+      background:
+        radial-gradient(circle at 50% 18%, rgba(255, 215, 120, 0.22), transparent 18%),
+        radial-gradient(circle at 15% 30%, rgba(255, 180, 70, 0.08), transparent 24%),
+        radial-gradient(circle at 85% 35%, rgba(255, 180, 70, 0.08), transparent 24%),
+        linear-gradient(to bottom, rgba(0,0,0,.30), rgba(0,0,0,.74)),
+        url("banner.jpg") center center / cover no-repeat,
+        linear-gradient(135deg, #0a0908 0%, #15110c 50%, #090909 100%);
+    }
 
-.container{
-position:relative;
-text-align:center;
-z-index:2;
-max-width:600px;
-padding:40px;
-}
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(circle at center, transparent 38%, rgba(0,0,0,.42) 100%),
+        linear-gradient(to top, rgba(0,0,0,.78) 0%, rgba(0,0,0,.12) 45%, rgba(0,0,0,.44) 100%);
+    }
 
-h1{
-font-size:64px;
-letter-spacing:8px;
-color:#D4AF37;
-margin-bottom:10px;
-}
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        repeating-linear-gradient(
+          to right,
+          rgba(255,255,255,0.00) 0,
+          rgba(255,255,255,0.00) 2px,
+          rgba(255,255,255,0.012) 3px,
+          rgba(255,255,255,0.00) 4px
+        );
+      opacity: .16;
+      mix-blend-mode: soft-light;
+    }
 
-p{
-font-size:20px;
-opacity:0.85;
-margin-bottom:40px;
-}
+    .light-column {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: min(24vw, 260px);
+      height: 48vh;
+      transform: translateX(-50%);
+      background: radial-gradient(ellipse at top, rgba(255,230,155,.45), rgba(255,210,110,.12) 35%, transparent 70%);
+      filter: blur(22px);
+      opacity: .85;
+      pointer-events: none;
+    }
 
-.button{
-display:inline-block;
-padding:18px 40px;
-font-size:18px;
-border:2px solid #D4AF37;
-color:#D4AF37;
-text-decoration:none;
-border-radius:40px;
-transition:0.3s;
-}
+    .spark {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 52% 16%, rgba(255, 229, 160, 0.95) 0 1px, transparent 2px),
+        radial-gradient(circle at 47% 20%, rgba(255, 223, 142, 0.7) 0 1px, transparent 2px),
+        radial-gradient(circle at 54% 24%, rgba(255, 223, 142, 0.55) 0 1px, transparent 2px),
+        radial-gradient(circle at 50% 28%, rgba(255, 223, 142, 0.40) 0 1px, transparent 2px),
+        radial-gradient(circle at 49% 32%, rgba(255, 223, 142, 0.28) 0 1px, transparent 2px);
+      opacity: .8;
+    }
 
-.button:hover{
-background:#D4AF37;
-color:black;
-box-shadow:0 0 25px rgba(212,175,55,0.8);
-}
+    .panel {
+      position: relative;
+      width: min(760px, 100%);
+      padding: 44px 30px 34px;
+      text-align: center;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)),
+        linear-gradient(180deg, var(--panel), var(--panel-strong));
+      backdrop-filter: blur(10px);
+      box-shadow:
+        var(--shadow),
+        inset 0 1px 0 rgba(255,255,255,.04),
+        inset 0 0 0 1px rgba(255,255,255,.015),
+        0 0 40px rgba(212,175,55,.10);
+    }
 
-</style>
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: 27px;
+      border: 1px solid rgba(255, 240, 190, 0.03);
+      pointer-events: none;
+    }
 
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,175,55,.22);
+      background: rgba(212,175,55,.06);
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+    }
+
+    .title {
+      margin: 0;
+      font-family: "Cinzel", serif;
+      font-size: clamp(56px, 10vw, 112px);
+      line-height: .92;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      text-shadow:
+        0 0 10px rgba(212,175,55,.18),
+        0 0 24px rgba(212,175,55,.15),
+        0 10px 30px rgba(0,0,0,.65);
+    }
+
+    .subtitle {
+      margin: 16px 0 0;
+      font-family: "Cinzel", serif;
+      font-size: clamp(18px, 2.8vw, 30px);
+      letter-spacing: .04em;
+      color: var(--text);
+    }
+
+    .copy {
+      max-width: 580px;
+      margin: 22px auto 0;
+      font-size: clamp(15px, 2vw, 18px);
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .divider {
+      width: 140px;
+      height: 1px;
+      margin: 28px auto 24px;
+      background: linear-gradient(to right, transparent, rgba(212,175,55,.95), transparent);
+      box-shadow: 0 0 18px rgba(212,175,55,.28);
+    }
+
+    .cta {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-width: 300px;
+      padding: 18px 32px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      color: #1c1405;
+      border: 1px solid rgba(245,223,160,.75);
+      background:
+        linear-gradient(180deg, #f8e8b3 0%, #d4af37 46%, #ab7a18 100%);
+      box-shadow:
+        0 14px 34px rgba(212,175,55,.24),
+        0 0 18px rgba(212,175,55,.18),
+        inset 0 1px 0 rgba(255,255,255,.55);
+      transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+    }
+
+    .cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,.24), transparent);
+      transform: translateX(-120%);
+      transition: transform .6s ease;
+      pointer-events: none;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px) scale(1.01);
+      filter: brightness(1.03);
+      box-shadow:
+        0 18px 40px rgba(212,175,55,.30),
+        0 0 28px rgba(212,175,55,.22),
+        inset 0 1px 0 rgba(255,255,255,.55);
+    }
+
+    .cta:hover::before {
+      transform: translateX(120%);
+    }
+
+    .cta:active {
+      transform: translateY(0);
+    }
+
+    .cta svg {
+      width: 20px;
+      height: 20px;
+      flex: 0 0 auto;
+    }
+
+    .micro {
+      margin-top: 16px;
+      font-size: 13px;
+      letter-spacing: .04em;
+      color: rgba(247, 240, 220, 0.52);
+    }
+
+    @media (max-width: 640px) {
+      .panel {
+        padding: 30px 18px 24px;
+        border-radius: 20px;
+      }
+
+      .panel::before {
+        border-radius: 19px;
+      }
+
+      .cta {
+        width: 100%;
+        min-width: unset;
+      }
+
+      .copy br {
+        display: none;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <main class="hero">
+    <div class="light-column"></div>
+    <div class="spark"></div>
 
-<div class="overlay"></div>
+    <section class="panel">
+      <div class="eyebrow">закритий покер-рум</div>
 
-<div class="container">
+      <h1 class="title">Момент</h1>
 
-<h1>МОМЕНТ</h1>
+      <p class="subtitle">Усе вирішується зараз.</p>
 
-<p>
-Одна карта.<br>
-Одно решение.
-</p>
+      <p class="copy">
+        Приватний простір для гравців, які розуміють ціну рішення,
+        холоднокровність ставки та силу правильного входу.
+      </p>
 
-<a 
-class="button"
-href="https://t.me/+QkGIjmAgcN5lM2Q6"
-onclick="ttq.track('ClickTelegram')"
-target="_blank"
->
-Войти в игру
-</a>
+      <div class="divider"></div>
 
-</div>
+      <a
+        class="cta"
+        href="https://t.me/+QkGIjmAgcN5lM2Q6"
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="ttq.track('ClickTelegram')"
+      >
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M21.5 4.5L18.4 19.1C18.17 20.14 17.57 20.39 16.7 19.91L11.98 16.43L9.7 18.63C9.45 18.88 9.24 19.09 8.76 19.09L9.1 14.27L17.87 6.34C18.25 6 17.79 5.81 17.28 6.15L6.44 12.98L1.78 11.52C0.77 11.2 0.75 10.5 1.99 10.01L20.19 2.99C21.03 2.68 21.76 3.19 21.5 4.5Z"
+            fill="currentColor"
+          />
+        </svg>
+        Увійти через Telegram
+      </a>
 
+      <div class="micro">Один екран. Один клік. Один момент.</div>
+    </section>
+  </main>
 </body>
 </html>
