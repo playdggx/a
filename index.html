@@ -1,367 +1,787 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>МОМЕНТ — закритий покер-рум</title>
-  <meta
-    name="description"
-    content="Закритий покер-рум. Усе вирішується зараз. Вхід через Telegram."
-  />
+<!-- TikTok Pixel Code Start -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]=[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- TikTok Pixel Code -->
-  <script>
-    !function (w, d, t) {
-      w.TiktokAnalyticsObject = t;
-      var ttq = w[t] = w[t] || [];
-      ttq.methods = ["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];
-      ttq.setAndDefer = function(t, e) {
-        t[e] = function() {
-          t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
-        };
-      };
-      for (var i = 0; i < ttq.methods.length; i++) {
-        ttq.setAndDefer(ttq, ttq.methods[i]);
-      }
-      ttq.instance = function(t) {
-        for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) {
-          ttq.setAndDefer(e, ttq.methods[n]);
-        }
-        return e;
-      };
-      ttq.load = function(e, n) {
-        var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
-        ttq._i = ttq._i || {};
-        ttq._i[e] = [];
-        ttq._i[e]._u = i;
-        ttq._t = ttq._t || {};
-        ttq._t[e] = +new Date;
-        ttq._o = ttq._o || {};
-        ttq._o[e] = n || {};
-        var o = document.createElement("script");
-        o.type = "text/javascript";
-        o.async = true;
-        o.src = i + "?sdkid=" + e + "&lib=" + t;
-        var a = document.getElementsByTagName("script")[0];
-        a.parentNode.insertBefore(o, a);
-      };
-
-      ttq.load('D6TSV13C77U4GR00DLF0');
-      ttq.page();
-    }(window, document, 'ttq');
-  </script>
-  <!-- End TikTok Pixel -->
+  ttq.load('D6TSV13C77U4GR00DLF0');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
 
   <style>
     :root {
-      --bg: #050505;
-      --bg-soft: #0b0b0b;
-      --gold: #d4af37;
-      --gold-light: #f5dfa0;
-      --gold-deep: #a97a19;
-      --text: #f7f0dc;
-      --muted: rgba(247, 240, 220, 0.78);
-      --line: rgba(212, 175, 55, 0.28);
-      --panel: rgba(12, 10, 8, 0.44);
-      --panel-strong: rgba(8, 7, 6, 0.62);
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+      --bg: #09090b;
+      --bg-soft: #111214;
+      --panel: rgba(255,255,255,0.06);
+      --panel-2: rgba(255,255,255,0.04);
+      --line: rgba(255,255,255,0.12);
+      --text: #f4efe4;
+      --muted: #c8c0b1;
+      --gold: #d8b36a;
+      --gold-soft: rgba(216,179,106,0.16);
+      --red: #c62828;
+      --red-hover: #df3b3b;
+      --white-btn: rgba(255,255,255,0.08);
+      --shadow: 0 24px 60px rgba(0,0,0,0.42);
+      --radius: 26px;
+      --tg-link: "https://t.me/+fdWUAplzySo4MjRi";
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html, body {
       margin: 0;
+      padding: 0;
       min-height: 100%;
-      background: var(--bg);
+      background:
+        radial-gradient(circle at 50% 30%, rgba(16, 94, 56, 0.46), transparent 34%),
+        radial-gradient(circle at 20% 16%, rgba(255,255,255,0.04), transparent 24%),
+        radial-gradient(circle at 82% 18%, rgba(255,255,255,0.03), transparent 20%),
+        linear-gradient(180deg, #070708 0%, #0d0d0f 100%);
       color: var(--text);
-      font-family: "Inter", sans-serif;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      overflow-x: hidden;
     }
 
-    body {
-      overflow: hidden;
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
     }
 
-    .hero {
+    body::before {
+      background:
+        radial-gradient(circle at 30% 24%, rgba(255,255,255,0.05), transparent 18%),
+        radial-gradient(circle at 73% 24%, rgba(255,255,255,0.03), transparent 22%),
+        radial-gradient(circle at 50% 82%, rgba(255,255,255,0.02), transparent 28%);
+      filter: blur(40px);
+      animation: smoke 12s ease-in-out infinite alternate;
+    }
+
+    body::after {
+      background: linear-gradient(to bottom, rgba(216,179,106,0.05), transparent 24%, transparent 76%, rgba(216,179,106,0.04));
+    }
+
+    @keyframes smoke {
+      0% { transform: translateY(0) scale(1); opacity: .82; }
+      100% { transform: translateY(-14px) scale(1.04); opacity: 1; }
+    }
+
+    .wrap {
       position: relative;
+      z-index: 1;
       min-height: 100vh;
       display: grid;
       place-items: center;
       padding: 24px;
-      isolation: isolate;
-      background:
-        radial-gradient(circle at 50% 18%, rgba(255, 215, 120, 0.22), transparent 18%),
-        radial-gradient(circle at 15% 30%, rgba(255, 180, 70, 0.08), transparent 24%),
-        radial-gradient(circle at 85% 35%, rgba(255, 180, 70, 0.08), transparent 24%),
-        linear-gradient(to bottom, rgba(0,0,0,.30), rgba(0,0,0,.74)),
-        url("banner.jpg") center center / cover no-repeat,
-        linear-gradient(135deg, #0a0908 0%, #15110c 50%, #090909 100%);
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -2;
-      background:
-        radial-gradient(circle at center, transparent 38%, rgba(0,0,0,.42) 100%),
-        linear-gradient(to top, rgba(0,0,0,.78) 0%, rgba(0,0,0,.12) 45%, rgba(0,0,0,.44) 100%);
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-      background:
-        repeating-linear-gradient(
-          to right,
-          rgba(255,255,255,0.00) 0,
-          rgba(255,255,255,0.00) 2px,
-          rgba(255,255,255,0.012) 3px,
-          rgba(255,255,255,0.00) 4px
-        );
-      opacity: .16;
-      mix-blend-mode: soft-light;
-    }
-
-    .light-column {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: min(24vw, 260px);
-      height: 48vh;
-      transform: translateX(-50%);
-      background: radial-gradient(ellipse at top, rgba(255,230,155,.45), rgba(255,210,110,.12) 35%, transparent 70%);
-      filter: blur(22px);
-      opacity: .85;
-      pointer-events: none;
-    }
-
-    .spark {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background:
-        radial-gradient(circle at 52% 16%, rgba(255, 229, 160, 0.95) 0 1px, transparent 2px),
-        radial-gradient(circle at 47% 20%, rgba(255, 223, 142, 0.7) 0 1px, transparent 2px),
-        radial-gradient(circle at 54% 24%, rgba(255, 223, 142, 0.55) 0 1px, transparent 2px),
-        radial-gradient(circle at 50% 28%, rgba(255, 223, 142, 0.40) 0 1px, transparent 2px),
-        radial-gradient(circle at 49% 32%, rgba(255, 223, 142, 0.28) 0 1px, transparent 2px);
-      opacity: .8;
-    }
-
-    .panel {
+    .app {
+      width: 100%;
+      max-width: 470px;
+      min-height: 820px;
       position: relative;
-      width: min(760px, 100%);
-      padding: 44px 30px 34px;
-      text-align: center;
-      border-radius: 28px;
+      overflow: hidden;
+      border-radius: 34px;
       border: 1px solid var(--line);
       background:
-        linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)),
-        linear-gradient(180deg, var(--panel), var(--panel-strong));
-      backdrop-filter: blur(10px);
-      box-shadow:
-        var(--shadow),
-        inset 0 1px 0 rgba(255,255,255,.04),
-        inset 0 0 0 1px rgba(255,255,255,.015),
-        0 0 40px rgba(212,175,55,.10);
+        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03)),
+        linear-gradient(180deg, rgba(16,57,38,0.68) 0%, rgba(7,16,11,0.84) 100%);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
     }
 
-    .panel::before {
-      content: "";
+    .table-glow {
       position: absolute;
-      inset: 1px;
-      border-radius: 27px;
-      border: 1px solid rgba(255, 240, 190, 0.03);
+      left: 10%;
+      right: 10%;
+      top: 11%;
+      height: 270px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(23,120,73,0.56) 0%, rgba(18,72,46,0.28) 46%, transparent 72%);
+      filter: blur(10px);
       pointer-events: none;
     }
 
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 16px;
-      padding: 8px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(212,175,55,.22);
-      background: rgba(212,175,55,.06);
-      color: var(--gold-light);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: .24em;
-      text-transform: uppercase;
-    }
-
-    .title {
-      margin: 0;
-      font-family: "Cinzel", serif;
-      font-size: clamp(56px, 10vw, 112px);
-      line-height: .92;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      color: var(--gold-light);
-      text-shadow:
-        0 0 10px rgba(212,175,55,.18),
-        0 0 24px rgba(212,175,55,.15),
-        0 10px 30px rgba(0,0,0,.65);
-    }
-
-    .subtitle {
-      margin: 16px 0 0;
-      font-family: "Cinzel", serif;
-      font-size: clamp(18px, 2.8vw, 30px);
-      letter-spacing: .04em;
-      color: var(--text);
-    }
-
-    .copy {
-      max-width: 580px;
-      margin: 22px auto 0;
-      font-size: clamp(15px, 2vw, 18px);
-      line-height: 1.7;
-      color: var(--muted);
-    }
-
-    .divider {
-      width: 140px;
+    .gold-line {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      top: 24px;
       height: 1px;
-      margin: 28px auto 24px;
-      background: linear-gradient(to right, transparent, rgba(212,175,55,.95), transparent);
-      box-shadow: 0 0 18px rgba(212,175,55,.28);
+      background: linear-gradient(to right, transparent, rgba(216,179,106,0.7), transparent);
     }
 
-    .cta {
+    .screen {
+      display: none;
+      min-height: 820px;
+      padding: 56px 28px 30px;
       position: relative;
+    }
+
+    .screen.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      animation: fadeIn .45s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .top-tag {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: .95;
+      margin-bottom: 18px;
+    }
+
+    h1, h2 {
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: .98;
+    }
+
+    h2 {
+      font-size: 34px;
+      line-height: 1.02;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+      margin: 18px 0 0;
+      max-width: 370px;
+    }
+
+    .hero-area {
+      padding-top: 8px;
+    }
+
+    .poker-visual {
+      position: relative;
+      height: 300px;
+      margin: 26px 0 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cards-stack {
+      position: relative;
+      width: 270px;
+      height: 180px;
+    }
+
+    .card {
+      width: 114px;
+      height: 160px;
+      border-radius: 16px;
+      position: absolute;
+      top: 8px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.17), rgba(255,255,255,0.04)),
+        rgba(16,16,18,0.95);
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: 0 16px 30px rgba(0,0,0,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 28px;
+      transition: transform .8s ease, opacity .5s ease, filter .3s ease;
+      backface-visibility: hidden;
+    }
+
+    .card.back {
+      background:
+        linear-gradient(135deg, rgba(216,179,106,0.24), rgba(255,255,255,0.05)),
+        #651919;
+      color: rgba(255,255,255,0.92);
+      font-size: 30px;
+    }
+
+    .card.one { left: 14px; transform: rotate(-11deg); }
+    .card.two { right: 14px; transform: rotate(11deg); }
+
+    .center-chip {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle, rgba(216,179,106,0.2), rgba(216,179,106,0.05)),
+        rgba(0,0,0,0.34);
+      border: 1px solid rgba(216,179,106,0.34);
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      box-shadow: 0 0 35px rgba(216,179,106,0.08);
+    }
+
+    .btns {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    button, a.cta {
+      appearance: none;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+      border-radius: 16px;
+      min-height: 58px;
+      padding: 14px 18px;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      transition: transform .15s ease, opacity .15s ease, background .2s ease, border-color .2s ease;
+      text-decoration: none;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      min-width: 300px;
-      padding: 18px 32px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: .05em;
-      color: #1c1405;
-      border: 1px solid rgba(245,223,160,.75);
-      background:
-        linear-gradient(180deg, #f8e8b3 0%, #d4af37 46%, #ab7a18 100%);
-      box-shadow:
-        0 14px 34px rgba(212,175,55,.24),
-        0 0 18px rgba(212,175,55,.18),
-        inset 0 1px 0 rgba(255,255,255,.55);
-      transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+      text-align: center;
     }
 
-    .cta::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      background: linear-gradient(to right, transparent, rgba(255,255,255,.24), transparent);
-      transform: translateX(-120%);
-      transition: transform .6s ease;
-      pointer-events: none;
+    button:hover, a.cta:hover { transform: translateY(-1px); }
+    button:active, a.cta:active { transform: translateY(1px); }
+
+    .btn-red {
+      background: linear-gradient(180deg, var(--red-hover), var(--red));
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(197,40,40,0.24);
     }
 
-    .cta:hover {
-      transform: translateY(-2px) scale(1.01);
-      filter: brightness(1.03);
-      box-shadow:
-        0 18px 40px rgba(212,175,55,.30),
-        0 0 28px rgba(212,175,55,.22),
-        inset 0 1px 0 rgba(255,255,255,.55);
+    .btn-light {
+      background: var(--white-btn);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.14);
     }
 
-    .cta:hover::before {
-      transform: translateX(120%);
-    }
-
-    .cta:active {
-      transform: translateY(0);
-    }
-
-    .cta svg {
-      width: 20px;
-      height: 20px;
-      flex: 0 0 auto;
-    }
-
-    .micro {
-      margin-top: 16px;
+    .bottom-note {
       font-size: 13px;
-      letter-spacing: .04em;
-      color: rgba(247, 240, 220, 0.52);
+      color: rgba(255,255,255,0.54);
+      text-align: center;
+      margin-top: 14px;
     }
 
-    @media (max-width: 640px) {
-      .panel {
-        padding: 30px 18px 24px;
-        border-radius: 20px;
-      }
+    .reveal-box,
+    .soft-box {
+      margin-top: 22px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 22px;
+    }
 
-      .panel::before {
-        border-radius: 19px;
-      }
+    .reveal-box { min-height: 270px; }
 
-      .cta {
-        width: 100%;
-        min-width: unset;
-      }
+    .reveal-status {
+      color: var(--gold);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.17em;
+      margin-bottom: 18px;
+    }
 
-      .copy br {
-        display: none;
+    .reveal-result {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.05;
+      margin-top: 16px;
+      min-height: 72px;
+    }
+
+    .small-text {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 13px;
+      margin-top: 24px;
+    }
+
+    .feature {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      padding: 16px;
+      color: var(--text);
+      line-height: 1.45;
+      font-size: 16px;
+    }
+
+    .feature span {
+      color: var(--gold);
+      margin-right: 8px;
+    }
+
+    .pick-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .pick-card {
+      height: 132px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background:
+        linear-gradient(135deg, rgba(216,179,106,0.2), rgba(255,255,255,0.04)),
+        #621919;
+      color: rgba(255,255,255,0.92);
+      display: grid;
+      place-items: center;
+      font-size: 34px;
+      cursor: pointer;
+      transition: transform .15s ease, border-color .2s ease, box-shadow .2s ease, filter .2s ease;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+    }
+
+    .pick-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(216,179,106,0.45);
+      box-shadow: 0 14px 24px rgba(0,0,0,0.24);
+    }
+
+    .pick-card.selected,
+    .pick-card.revealed {
+      border-color: rgba(216,179,106,0.7);
+      box-shadow: 0 0 0 1px rgba(216,179,106,0.26), 0 14px 26px rgba(0,0,0,0.25);
+    }
+
+    .pick-card.good {
+      background:
+        linear-gradient(135deg, rgba(216,179,106,0.24), rgba(255,255,255,0.06)),
+        #173a28;
+    }
+
+    .final-box {
+      margin-top: 18px;
+      padding: 24px;
+      border-radius: 26px;
+      background:
+        radial-gradient(circle at top, rgba(216,179,106,0.18), transparent 45%),
+        rgba(255,255,255,0.05);
+      border: 1px solid rgba(216,179,106,0.22);
+      text-align: center;
+    }
+
+    .telegram-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .final-box p {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 16px;
+      margin: 10px 0 22px;
+    }
+
+    .micro-proof {
+      margin-top: 14px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.62);
+    }
+
+    .footer-mini {
+      text-align: center;
+      color: rgba(255,255,255,0.45);
+      font-size: 12px;
+      margin-top: 16px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .pulse {
+      animation: pulse 1.6s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(197,40,40,0.38); }
+      70% { box-shadow: 0 0 0 14px rgba(197,40,40,0); }
+      100% { box-shadow: 0 0 0 0 rgba(197,40,40,0); }
+    }
+
+    @media (max-width: 520px) {
+      .wrap { padding: 0; }
+      .app {
+        min-height: 100vh;
+        border-radius: 0;
+        max-width: 100%;
       }
+      .screen { min-height: 100vh; }
+      h1 { font-size: 38px; }
+      h2 { font-size: 31px; }
     }
   </style>
 </head>
 <body>
-  <main class="hero">
-    <div class="light-column"></div>
-    <div class="spark"></div>
+  <div class="wrap">
+    <div class="app">
+      <div class="table-glow"></div>
+      <div class="gold-line"></div>
 
-    <section class="panel">
-      <div class="eyebrow">закритий покер-рум</div>
+      <!-- SCREEN 1 -->
+      <section class="screen active" id="screen1">
+        <div>
+          <div class="top-tag">Poker decision</div>
+          <div class="hero-area">
+            <h1>Іноді одне рішення<br>за столом змінює все.</h1>
+            <p class="lead">
+              У тебе лише кілька секунд на рішення. Перевірити, відступити чи спробувати
+              прочитати суперника? Зроби свій хід — і подивись, що ховалося за цим олл-іном.
+            </p>
+          </div>
 
-      <h1 class="title">Момент</h1>
+          <div class="poker-visual">
+            <div class="cards-stack">
+              <div class="card back one">🂠</div>
+              <div class="card back two">🂠</div>
+              <div class="center-chip">all-in</div>
+            </div>
+          </div>
+        </div>
 
-      <p class="subtitle">Усе вирішується зараз.</p>
+        <div>
+          <div class="btns">
+            <button class="btn-red" onclick="goToReveal('check')">Подивитися, що всередині</button>
+            <button class="btn-light" onclick="goToReveal('fold')">⚪ Скинути карти</button>
+          </div>
+          <div class="bottom-note">У покері правда відкривається тільки після рішення</div>
+        </div>
+      </section>
 
-      <p class="copy">
-        Приватний простір для гравців, які розуміють ціну рішення,
-        холоднокровність ставки та силу правильного входу.
-      </p>
+      <!-- SCREEN 2 -->
+      <section class="screen" id="screen2">
+        <div>
+          <div class="top-tag">Розкриття</div>
+          <h2>Карти відкриваються…</h2>
+          <p class="lead">
+            Ще мить — і стане зрозуміло, що це було: холодний блеф, тиск у потрібний момент
+            чи рука, з якою йдуть до кінця.
+          </p>
 
-      <div class="divider"></div>
+          <div class="reveal-box">
+            <div class="reveal-status" id="revealStatus">аналізуємо ситуацію</div>
 
-      <a
-        class="cta"
-        href="https://t.me/+QkGIjmAgcN5lM2Q6"
-        target="_blank"
-        rel="noopener noreferrer"
-        onclick="ttq.track('ClickTelegram')"
-      >
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path
-            d="M21.5 4.5L18.4 19.1C18.17 20.14 17.57 20.39 16.7 19.91L11.98 16.43L9.7 18.63C9.45 18.88 9.24 19.09 8.76 19.09L9.1 14.27L17.87 6.34C18.25 6 17.79 5.81 17.28 6.15L6.44 12.98L1.78 11.52C0.77 11.2 0.75 10.5 1.99 10.01L20.19 2.99C21.03 2.68 21.76 3.19 21.5 4.5Z"
-            fill="currentColor"
-          />
-        </svg>
-        Увійти через Telegram
-      </a>
+            <div class="poker-visual" style="height: 180px; margin: 0;">
+              <div class="cards-stack">
+                <div class="card back one" id="revealCard1">🂠</div>
+                <div class="card back two" id="revealCard2">🂠</div>
+              </div>
+            </div>
 
-      <div class="micro">Один екран. Один клік. Один момент.</div>
-    </section>
-  </main>
+            <div class="reveal-result" id="revealResult">...</div>
+            <div class="small-text" id="revealSubtext">
+              Іноді одна роздача показує про гравця більше, ніж цілий вечір за столом.
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="btns">
+            <button class="btn-red hidden" id="afterRevealBtn" onclick="goToEngage()">Показати далі</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN 3 -->
+      <section class="screen" id="screen3">
+        <div>
+          <div class="top-tag">Гра тільки починається</div>
+          <h2>Хочеш більше таких моментів?</h2>
+          <p class="lead">
+            У Telegram-каналі щодня з’являються роздачі, де все вирішують деталі:
+            тиск, таймінг, помилки, добори, блефи й рішення, які хочеться розбирати до кінця.
+          </p>
+
+          <div class="feature-list">
+            <div class="feature"><span>♠</span> роздачі, які хочеться додивитися до шоудауну</div>
+            <div class="feature"><span>♠</span> ситуації, де одна деталь змінює весь розклад</div>
+            <div class="feature"><span>♠</span> жива напруга гри та відчуття моменту всередині каналу</div>
+          </div>
+
+          <div class="soft-box" style="margin-top: 28px;">
+            <div class="reveal-status">Останній вибір</div>
+            <div class="small-text">
+              Обери карту. Іноді інтуїція підказує правильний напрямок ще до того, як усе можна
+              пояснити логікою.
+            </div>
+
+            <div class="pick-grid" id="pickGrid">
+              <div class="pick-card" data-index="0">🂠</div>
+              <div class="pick-card" data-index="1">🂠</div>
+              <div class="pick-card" data-index="2">🂠</div>
+            </div>
+
+            <div class="reveal-result" id="pickResult" style="font-size: 26px; min-height: 64px; margin-top: 22px;"></div>
+            <div class="small-text" id="pickSubtext"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="btns">
+            <button class="btn-red hidden" id="toFinalBtn" onclick="goToFinal()">Відкрити канал</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN 4 -->
+      <section class="screen" id="screen4">
+        <div>
+          <div class="top-tag">Фінальний вибір</div>
+          <h2>Приєднуйся до Telegram-каналу</h2>
+          <p class="lead">
+            Усе найцікавіше — всередині. Нові роздачі, сильні моменти, напруга рішень і той
+            самий ритм гри, заради якого хочеться повертатися знову.
+          </p>
+
+          <div class="final-box">
+            <div class="telegram-badge">🔥 Нові роздачі • жива напруга • атмосфера гри</div>
+            <h2 style="font-size: 28px;">Переходь у Telegram</h2>
+            <p>
+              Саме там починається справжнє занурення: свіжі покерні ситуації, розбори,
+              емоція рішень і формат, у якому ти не просто дивишся — а входиш у ритм гри
+              разом з іншими.
+            </p>
+
+            <a
+              class="cta btn-red pulse"
+              href="https://t.me/+fdWUAplzySo4MjRi"
+              target="_blank"
+              rel="noopener noreferrer"
+              onclick="trackTelegramClick('final_main_cta')"
+            >
+              Перейти в Telegram
+            </a>
+
+            <div class="micro-proof">
+              Перейди в канал і увійди в атмосферу гри вже з першої роздачі.
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-mini">
+          poker funnel / telegram conversion
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    const TELEGRAM_LINK = "https://t.me/+fdWUAplzySo4MjRi";
+
+    const results = [
+      {
+        title: "Це був блеф.",
+        subtext: "Усе виглядало переконливо. Саме тому такі роздачі так складно читати з першого погляду.",
+        cards: ["A♠", "5♦"]
+      },
+      {
+        title: "Це була сильна рука.",
+        subtext: "Іноді найнебезпечніша агресія — це не вистава, а чиста сила, з якою йдуть до кінця.",
+        cards: ["K♠", "K♥"]
+      },
+      {
+        title: "Ти був близько.",
+        subtext: "Найцікавіші моменти — ті, де блеф і сила виглядають майже однаково переконливо.",
+        cards: ["Q♣", "J♣"]
+      }
+    ];
+
+    let selectedReveal = null;
+    let winningPick = Math.floor(Math.random() * 3);
+
+    function safeTrack(eventName, payload = {}) {
+      try {
+        if (typeof ttq !== "undefined" && ttq.track) {
+          ttq.track(eventName, payload);
+        }
+      } catch (e) {}
+    }
+
+    function showScreen(id) {
+      document.querySelectorAll(".screen").forEach(screen => screen.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function goToReveal(action) {
+      safeTrack("ClickButton", {
+        button_name: action === "check" ? "check_button" : "fold_button",
+        page_section: "screen1"
+      });
+
+      showScreen("screen2");
+      safeTrack("ViewContent", { content_name: "screen2_reveal" });
+      playReveal(action);
+    }
+
+    function playReveal(action) {
+      const reveal = results[Math.floor(Math.random() * results.length)];
+      selectedReveal = reveal;
+
+      const status = document.getElementById("revealStatus");
+      const result = document.getElementById("revealResult");
+      const sub = document.getElementById("revealSubtext");
+      const c1 = document.getElementById("revealCard1");
+      const c2 = document.getElementById("revealCard2");
+      const btn = document.getElementById("afterRevealBtn");
+
+      btn.classList.add("hidden");
+      result.textContent = "...";
+      sub.textContent = action === "fold"
+        ? "Ти вирішив відступити. Але зараз побачимо, чи було це обережністю… чи втраченим шансом."
+        : "Ти натиснув перевірку. Ще мить — і стане ясно, чи це був сміливий колл, чи дорога помилка.";
+
+      c1.className = "card back one";
+      c2.className = "card back two";
+      c1.textContent = "🂠";
+      c2.textContent = "🂠";
+
+      status.textContent = "аналізуємо ситуацію";
+
+      setTimeout(() => {
+        status.textContent = "відкриваємо першу карту";
+        c1.className = "card one";
+        c1.textContent = reveal.cards[0];
+      }, 900);
+
+      setTimeout(() => {
+        status.textContent = "відкриваємо другу карту";
+        c2.className = "card two";
+        c2.textContent = reveal.cards[1];
+      }, 1700);
+
+      setTimeout(() => {
+        status.textContent = "результат";
+        result.textContent = reveal.title;
+        sub.textContent = reveal.subtext;
+        btn.classList.remove("hidden");
+
+        safeTrack("CompleteRegistration", {
+          funnel_step: "reveal_complete",
+          reveal_result: reveal.title
+        });
+      }, 2400);
+    }
+
+    function goToEngage() {
+      showScreen("screen3");
+      safeTrack("ViewContent", { content_name: "screen3_engage" });
+      initPickGame();
+    }
+
+    function initPickGame() {
+      const cards = document.querySelectorAll(".pick-card");
+      const pickResult = document.getElementById("pickResult");
+      const pickSubtext = document.getElementById("pickSubtext");
+      const toFinalBtn = document.getElementById("toFinalBtn");
+
+      pickResult.textContent = "";
+      pickSubtext.textContent = "";
+      toFinalBtn.classList.add("hidden");
+      winningPick = Math.floor(Math.random() * 3);
+
+      cards.forEach(card => {
+        card.classList.remove("selected", "revealed", "good");
+        card.textContent = "🂠";
+        card.onclick = () => {
+          if (pickResult.textContent) return;
+
+          const index = Number(card.dataset.index);
+          card.classList.add("selected");
+
+          cards.forEach((c, i) => {
+            c.classList.add("revealed");
+            if (i === winningPick) {
+              c.classList.add("good");
+              c.textContent = "A♠";
+            } else {
+              c.textContent = i === index ? "10♦" : "7♣";
+            }
+          });
+
+          if (index === winningPick) {
+            pickResult.textContent = "Точне відчуття моменту.";
+            pickSubtext.textContent = "Саме заради таких роздач і повертаються знову. У каналі — ще більше подібних ситуацій, де напруга тримає до кінця.";
+          } else {
+            pickResult.textContent = "Майже.";
+            pickSubtext.textContent = "У цьому і весь азарт: одна дрібниця — і вся ситуація читається зовсім інакше. У каналі таких моментів значно більше.";
+          }
+
+          toFinalBtn.classList.remove("hidden");
+
+          safeTrack("ClickButton", {
+            button_name: "mini_game_card_pick",
+            page_section: "screen3",
+            picked_index: index,
+            was_correct: index === winningPick
+          });
+        };
+      });
+    }
+
+    function goToFinal() {
+      showScreen("screen4");
+      safeTrack("ViewContent", { content_name: "screen4_final" });
+    }
+
+    function trackTelegramClick(source) {
+      safeTrack("ClickButton", {
+        button_name: "telegram_cta",
+        source: source
+      });
+
+      safeTrack("SubmitForm", {
+        destination: TELEGRAM_LINK,
+        source: source
+      });
+    }
+  </script>
 </body>
 </html>
